@@ -7,7 +7,7 @@ export default function Header() {
       <Link className="brand" to="/" aria-label="GreenCane Nursery home">
         <span className="brand-icon">🌿</span>
         <span>
-          <strong>Khot GreenCane Nursery</strong>
+          <strong> GreenCane Nursery</strong>
           <small>QUALITY SUGARCANE SEEDLINGS</small>
         </span>
       </Link>
