@@ -15,7 +15,7 @@ export default function Contact() {
 
     // Replace this placeholder with the nursery's real WhatsApp number.
     window.open(
-      `https://wa.me/91XXXXXXXXXX?text=${text}`,
+      `https://wa.me/918197588468?text=${text}`,
       '_blank',
       'noopener,noreferrer',
     )
