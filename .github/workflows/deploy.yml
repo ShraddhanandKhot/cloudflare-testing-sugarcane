@@ -38,7 +38,8 @@ jobs:
       - name: Verify production build
         run: test -f dist/index.html
 
-      - name: Upload website to Cloudflare R2
+      
+      - name: Upload website assets and public files
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -46,6 +47,19 @@ jobs:
         run: |
           aws s3 sync dist/ \
             s3://site-factory-testing-bucket/sites/sugarcane-nursery/production/ \
+            --exclude "index.html" \
+            --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --region auto
+
+      - name: Publish HTML entry point last
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          aws s3 cp dist/index.html \
+            s3://site-factory-testing-bucket/sites/sugarcane-nursery/production/index.html \
             --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" \
             --region auto \
-            --delete
+            --content-type "text/html; charset=utf-8"
+
