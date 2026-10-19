@@ -10,7 +10,7 @@ export default function Header() {
           <LeafLogo size={34} />
         </span>
         <span>
-          <strong> GreenCane Nursery</strong>
+          <strong>Khot GreenCane Nursery</strong>
           <small>QUALITY SUGARCANE SEEDLINGS</small>
         </span>
       </Link>
