@@ -1,11 +1,14 @@
 
 import { Link } from 'react-router-dom'
+import { LeafLogo, WhatsAppIcon } from './Icons'
 
 export default function Header() {
   return (
     <header className="site-header">
       <Link className="brand" to="/" aria-label="GreenCane Nursery home">
-        <span className="brand-icon">🌿</span>
+        <span className="brand-icon">
+          <LeafLogo size={34} />
+        </span>
         <span>
           <strong> GreenCane Nursery</strong>
           <small>QUALITY SUGARCANE SEEDLINGS</small>
@@ -24,8 +27,9 @@ export default function Header() {
         href="https://wa.me/91XXXXXXXXXX"
         target="_blank"
         rel="noreferrer"
+        aria-label="WhatsApp enquiry"
       >
-        WhatsApp Enquiry ↗
+        <WhatsAppIcon size={22} color="currentColor" />
       </a>
     </header>
   )

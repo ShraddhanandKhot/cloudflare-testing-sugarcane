@@ -1,21 +1,28 @@
 
 import { Link } from 'react-router-dom'
+import {
+  FarmLogo,
+  FarmerLogo,
+  LeafLogo,
+  LocationLogo,
+  SeedlingLogo,
+} from '../components/Icons'
 
 const services = [
   {
-    icon: '🌱',
+    icon: <SeedlingLogo size={28} color="currentColor" />,
     title: 'Quality Seedlings',
     description:
       'Enquire about nursery-grown plants and current availability.',
   },
   {
-    icon: '🚜',
+    icon: <FarmLogo size={28} color="currentColor" />,
     title: 'Bulk Orders',
     description:
       'Discuss quantities and scheduling for your farm.',
   },
   {
-    icon: '🌾',
+    icon: <LeafLogo size={28} color="currentColor" />,
     title: 'Planting Guidance',
     description:
       'Get practical information about planting and crop care.',
@@ -30,7 +37,7 @@ export default function Home() {
 
         <div className="hero-content">
           <span className="eyebrow eyebrow-light">
-            GROW BETTER · HARVEST BETTER
+            GROW BETTER - HARVEST BETTER
           </span>
 
           <h1>
@@ -46,11 +53,11 @@ export default function Home() {
 
           <div className="hero-actions">
             <Link className="button button-green" to="/varieties">
-              Explore Varieties →
+              Explore Varieties
             </Link>
 
             <Link className="button button-outline-light" to="/contact">
-              Contact Us ↗
+              Contact Us
             </Link>
           </div>
 
@@ -62,9 +69,9 @@ export default function Home() {
 
         <aside className="hero-card">
           {[
-            ['🌱', 'Nursery-grown plants', 'Carefully managed seedlings'],
-            ['🚜', 'Bulk enquiries welcome', 'For farmers and grower groups'],
-            ['🤝', 'Helpful guidance', 'Ask before you order'],
+            [<SeedlingLogo size={20} color="currentColor" />, 'Nursery-grown plants', 'Carefully managed seedlings'],
+            [<FarmLogo size={20} color="currentColor" />, 'Bulk enquiries welcome', 'For farmers and grower groups'],
+            [<FarmerLogo size={20} color="currentColor" />, 'Helpful guidance', 'Ask before you order'],
           ].map(([icon, title, description]) => (
             <div className="hero-card-item" key={title}>
               <span className="feature-icon">{icon}</span>
@@ -79,19 +86,19 @@ export default function Home() {
 
       <section className="trust-bar">
         <div>
-          <span>🌿</span>
+          <span><LeafLogo size={28} color="currentColor" /></span>
           <p><strong>Healthy Plants</strong><small>Quality-focused care</small></p>
         </div>
         <div>
-          <span>🌾</span>
+          <span><SeedlingLogo size={28} color="currentColor" /></span>
           <p><strong>Variety Options</strong><small>Ask about current stock</small></p>
         </div>
         <div>
-          <span>👨‍🌾</span>
+          <span><FarmerLogo size={28} color="currentColor" /></span>
           <p><strong>Farmer First</strong><small>Friendly assistance</small></p>
         </div>
         <div>
-          <span>📍</span>
+          <span><LocationLogo size={28} color="currentColor" /></span>
           <p><strong>Local Enquiries</strong><small>Ask about delivery</small></p>
         </div>
       </section>
@@ -125,7 +132,7 @@ export default function Home() {
         </div>
 
         <Link className="button button-white" to="/contact">
-          Send an Enquiry ↗
+          Send an Enquiry
         </Link>
       </section>
     </>

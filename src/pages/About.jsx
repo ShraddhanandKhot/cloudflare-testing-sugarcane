@@ -29,7 +29,7 @@ export default function About() {
         </p>
 
         <Link className="button button-green" to="/contact">
-          Talk to Our Team ↗
+          Talk to Our Team
         </Link>
       </div>
     </section>

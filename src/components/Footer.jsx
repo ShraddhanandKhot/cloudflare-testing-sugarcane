@@ -1,11 +1,14 @@
 
 import { Link } from 'react-router-dom'
+import { LeafLogo } from './Icons'
 
 export default function Footer() {
   return (
     <footer className="site-footer">
       <Link className="brand footer-brand" to="/">
-        <span className="brand-icon">🌿</span>
+        <span className="brand-icon">
+          <LeafLogo size={28} />
+        </span>
         <span>
           <strong>GreenCane Nursery</strong>
           <small>GROW WITH CONFIDENCE</small>
@@ -15,7 +18,7 @@ export default function Footer() {
       <p>Quality-focused sugarcane nursery enquiries.</p>
 
       <span>
-        © {new Date().getFullYear()} GreenCane Nursery
+        Copyright {new Date().getFullYear()} GreenCane Nursery
       </span>
     </footer>
   )

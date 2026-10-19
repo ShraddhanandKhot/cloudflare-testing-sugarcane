@@ -60,7 +60,7 @@ export default function Varieties() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Enquire about this variety →
+                Enquire about this variety
               </a>
             </div>
           </article>

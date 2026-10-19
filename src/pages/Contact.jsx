@@ -55,7 +55,7 @@ export default function Contact() {
         />
 
         <button className="button button-green" type="submit">
-          Prepare WhatsApp Enquiry ↗
+          Prepare WhatsApp Enquiry
         </button>
       </form>
     </section>
